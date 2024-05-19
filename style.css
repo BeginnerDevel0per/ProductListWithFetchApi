@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+
+.modal-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 500;
+    background-color: rgba(0, 0, 0, 0.256);
+
+}
+
+.modal-wrapper.show {
+    display: flex;
+}
+
+.Modal {
+    z-index: 1001;
+    position: absolute;
+    border-radius: 15px;
+    background-color: white;
+    width: 800px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:1000px) {
+    .Modal {
+        flex-direction: column;
+        margin: 5px;
+        height: auto;
+        width: 95%;
+    }
+}
+
+.Modal .Product-Img {
+    border-radius: 10px 10px 0 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width:1000px) {
+    .Modal .Product-Img {
+       margin-top: 10px;
+        width: 100%;
+        height: 100%;
+      
+    }
+}
+
+.Modal .Product-Img img {
+    width: 50%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+    object-fit: contain;
+}
+
+.Modal .ProductContent {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 10px 10px;
+    height: 100%;
+    width: 45%;
+
+}
+
+@media (max-width:1000px) {
+    .Modal .ProductContent {
+        height: 50%;
+        width: 97%;
+    }
+}
+
+.Modal .ProductContent h3 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* alt satıra hiç inme */
+    overflow: hidden;
+    /* taşanları gizle */
+    margin-top: 80px;
+    width: 100%;
+}
+
+.Modal .ProductContent p {
+    color: rgb(165, 165, 165);
+    white-space: wrap;
+    overflow-y: auto;
+    margin-top: 35px;
+    height: 150px;
+}
+
+.Modal .ProductContent .ratings {
+    align-items: center;
+    margin-top: 10px;
+    display: flex;
+}
+
+.Modal .ProductContent .ratings svg {
+    color: rgb(255, 187, 0);
+    margin-left: 2px;
+}
+
+.Modal .ProductContent .ratings h5 {
+    color: rgb(165, 165, 165);
+    margin-left: 10px;
+}
+
+.Modal .ProductContent .PriceBox {
+    justify-content: end;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    display: flex;
+}
+
+@media (max-width:1000px) {
+    .Modal .ProductContent .PriceBox {
+        justify-content: center;
+        margin-right: 0;
+    }
+}
+
+.Modal .ProductContent button {
+    border: 1px solid rgb(165, 165, 165);
+    border-radius: 15px;
+    width: 170px;
+    height: 45px;
+}
+
+.Modal .ProductContent .AddToCardButton {
+    justify-content: end;
+    position: relative;
+    display: flex;
+}
+
+@media (max-width:1000px) {
+    .Modal .ProductContent .AddToCardButton {
+        justify-content: center;
+        margin-bottom: 15px;
+        top: 0;
+    }
+}
+
+.Modal .ProductContent button:hover {
+    background-color: rgb(196, 67, 20);
+    color: whitesmoke;
+}
+
+.Modal .ProductContent h1 {
+    color: rgb(196, 67, 20);
+    justify-content: space-around;
+    display: flex;
+}
+
+.ProductList {
+    justify-content: center;
+    position: absolute;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.ProductList .card {
+    border: 1px solid rgb(165, 165, 165);
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    height: 350px;
+    width: 250px;
+    margin: 5px;
+    z-index: 15;
+}
+
+.ProductList .card:hover {
+    border: 1px solid rgb(196, 67, 20);
+}
+
+.ProductList .card .Product-Img {
+    width: 100%;
+    height: 50%;
+}
+
+.ProductList .card .Product-Img img {
+    border-radius: 10px 10px 0 0;
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.ProductList .card .Card-Content {
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    height: 50%;
+}
+
+.ProductList .card .Card-Content h1 {
+    color: rgb(196, 67, 20);
+}
+
+.ProductList .card .Card-Content h5:nth-child(1) {
+    color: rgb(62, 62, 62);
+}
+
+.ProductList .card .Card-Content .ratings {
+    align-items: center;
+    margin-left: 5px;
+    display: flex;
+}
+
+.ProductList .card .Card-Content .ratings svg {
+    color: rgb(255, 187, 0);
+    margin-left: 2px;
+}
+
+.ProductList .card .Card-Content .ratings h5 {
+    color: rgb(139, 139, 139);
+    margin-left: 3px;
+}
+
+.ProductList .card .Card-Content button {
+    border: 1px solid rgb(165, 165, 165);
+    border-radius: 15px;
+    width: 150px;
+    height: 35px;
+}
+
+.ProductList .card .Card-Content button:hover {
+    background-color: rgb(196, 67, 20);
+    color: whitesmoke;
+}
